@@ -1036,7 +1036,7 @@ public final class XMLSecTool {
                 final TransformerFactory tfac = TransformerFactory.newInstance();
                 final Transformer serializer = tfac.newTransformer();
                 serializer.setOutputProperty("encoding", "UTF-8");
-                serializer.setOutputProperty(OutputKeys.INDENT, "yes");
+                //serializer.setOutputProperty(OutputKeys.INDENT, "yes");
                 serializer.transform(new DOMSource(xml), new StreamResult(out));
             } catch (final TransformerException e) {
                 log.error("Unable to write out XML", e);
